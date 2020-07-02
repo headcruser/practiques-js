@@ -25,6 +25,28 @@ export function digitalClock(selectors){
     });
 }
 
-export function alarm(){
-    
+export function alarm(data){
+    let alarmTempo;
+    const $alarm = d.createElement('audio');
+    $alarm.src = data.srcFile;
+
+
+    d.addEventListener('click',function(e) {
+        let buttonClicked = e.target;
+
+        if(buttonClicked === data.btnActivarAlarma){
+            alarmTempo = setTimeout(function(e){
+                $alarm.play();
+            },2000);
+
+            data.btnActivarAlarma.disabled = true;
+        }
+
+        if(buttonClicked === data.btnDesactivarAlarma){
+            clearTimeout(alarmTempo);
+            $alarm.pause();
+            $alarm.currentTime = 0;
+            data.btnActivarAlarma.disabled = false;
+        }
+    })
 }
