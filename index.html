@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ejercicios javascript">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hamburgers/1.1.3/hamburgers.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
     <title>Curso Javascript</title>
 </head>
 <body>
-    <header>
+    <header class='header'>
         <h1>Ejercicios Javascript</h1>
     </header>
-    <aside>
-        <nav>
+
+    <button class="panel-btn hamburger hamburger--vortex" type="button">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <aside class='panel'>
+        <nav class="menu">
             <a href="#seccion-1">Reloj Digital y alarma Sonora</a>
             <a href="#seccion-2">Ejercicio 2</a>
             <a href="#seccion-3">Ejercicio 3</a>
@@ -20,7 +29,7 @@
         </nav>
     </aside>
     <main>
-        <section id="seccion-1">
+        <section class="section" id="seccion-1">
             <h2>Seccion 1 </h2>
             <div id="reloj"></div>
             <div>
@@ -29,6 +38,15 @@
                 <button id='btn-activar-alarma'>Activar alarma</button>
                 <button id='btn-desactivar-alarma'>Desactivar Alarma</button>
             </div>
+        </section>
+        <section class="section" id="seccion-2">
+            <h2>Seccion 2 </h2>
+        </section>
+        <section class="section" id="seccion-3">
+            <h2>Seccion 3 </h2>
+        </section>
+        <section class="section" id="seccion-4">
+            <h2>Seccion 4 </h2>
         </section>
     </main>
     <script src="./assets/js/index.js" type="module"></script>

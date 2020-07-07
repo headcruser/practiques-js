@@ -1,4 +1,5 @@
 import {digitalClock,alarm} from "./practicas/reloj.js";
+import hamburger from "./practicas/menu_hamburgesa.js";
 
 const d = document;
 
@@ -14,4 +15,6 @@ d.addEventListener("DOMContentLoaded",function(e){
         btnActivarAlarma: d.getElementById('btn-activar-alarma'),
         btnDesactivarAlarma: d.getElementById('btn-desactivar-alarma')
     })
+
+    hamburger('.panel-btn','.panel','.menu a')
 });
