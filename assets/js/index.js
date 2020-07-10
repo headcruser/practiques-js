@@ -1,5 +1,7 @@
 import {digitalClock,alarm} from "./practicas/reloj.js";
 import hamburger from "./practicas/menu_hamburgesa.js";
+import { shortcuts,moveBall } from "./practicas/teclado.js";
+
 
 const d = document;
 
@@ -17,4 +19,9 @@ d.addEventListener("DOMContentLoaded",function(e){
     })
 
     hamburger('.panel-btn','.panel','.menu a')
+});
+
+d.addEventListener('keydown',function(e){
+    shortcuts(e);
+    moveBall(e,'.ball','.stage');
 });
