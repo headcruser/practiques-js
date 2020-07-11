@@ -1,6 +1,7 @@
 import {digitalClock,alarm} from "./practicas/reloj.js";
 import hamburger from "./practicas/menu_hamburgesa.js";
 import { shortcuts,moveBall } from "./practicas/teclado.js";
+import contdown from "./practicas/cuenta_regresiva.js";
 
 
 const d = document;
@@ -19,6 +20,8 @@ d.addEventListener("DOMContentLoaded",function(e){
     })
 
     hamburger('.panel-btn','.panel','.menu a')
+
+    contdown('contdown','Jul 10,2020 21:41','Cuenta terminada 😉');
 });
 
 d.addEventListener('keydown',function(e){
