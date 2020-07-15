@@ -3,6 +3,7 @@ import hamburger from "./practicas/menu_hamburgesa.js";
 import { shortcuts,moveBall } from "./practicas/teclado.js";
 import contdown from "./practicas/cuenta_regresiva.js";
 import scrollTopBottom from "./practicas/boton_scroll.js";
+import darkTheme from "./practicas/tema_obscuro.js";
 
 
 const d = document;
@@ -22,9 +23,11 @@ d.addEventListener("DOMContentLoaded",function(e){
 
     hamburger('.panel-btn','.panel','.menu a')
 
-    contdown('contdown','Jul 10,2020 21:41','Cuenta terminada 😉');
+    contdown('contdown','Dec 06,2020 21:41','Feliz Cumpleaños 😉');
 
     scrollTopBottom('.scroll-top-btn');
+
+    darkTheme('.dark-theme-btn','dark-mode');
 });
 
 d.addEventListener('keydown',function(e){
