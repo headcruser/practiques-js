@@ -1,24 +1,59 @@
-const d = document;
-export default function darkTheme(btn,classDark){
+// SHORTCUTS
+const d = document,
+    ls = localStorage;
+
+export default function darkTheme(btn, classDark) {
     const $themeBtn = d.querySelector(btn),
-    $selectors = d.querySelectorAll("[data-dark]");
+        $selectors = d.querySelectorAll("[data-dark]");
 
-    let moon="🌙" , sun="☀️";
+    const icons = {
+        moon: "🌙",
+        sun: "☀️",
+    };
 
-    d.addEventListener('click',function(e){
-        if(e.target.matches(btn)){
-            if ($themeBtn.textContent === moon){
-                $selectors.forEach(function(element){
-                    element.classList.add(classDark);
-                });
-                $themeBtn.textContent = sun;
+    const theme = {
+        dark: function () {
+            $selectors.forEach(function (element) {
+                element.classList.add(classDark);
+            });
+            
+            $themeBtn.textContent = icons.sun;
+
+            ls.setItem("theme", "dark");
+        },
+        light: function () {
+            $selectors.forEach(function (element) {
+                element.classList.remove(classDark);
+            });
+
+            $themeBtn.textContent = icons.moon;
+            
+            ls.setItem("theme", "light");
+        },
+    };
+
+    d.addEventListener("click", function (e) {
+        if (e.target.matches(btn)) {
+            if ($themeBtn.textContent === icons.moon) {
+                theme.dark();
+               
             } else {
-                $selectors.forEach(function(element){
-                    element.classList.remove(classDark);
-                });
-                $themeBtn.textContent = moon;
+                theme.light();
             }
         }
+    });
 
-    })
+    d.addEventListener("DOMContentLoaded", function (e) {
+        if (ls.getItem("theme") === null) {
+            ls.setItem("theme", "light");
+        }
+
+        if (ls.getItem("theme") === "light") {
+            theme.light();
+        }
+
+        if (ls.getItem("theme") === "dark") {
+            theme.dark();
+        }
+    });
 }

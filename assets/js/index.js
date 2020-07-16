@@ -8,6 +8,8 @@ import darkTheme from "./practicas/tema_obscuro.js";
 
 const d = document;
 
+darkTheme('.dark-theme-btn','dark-mode');
+
 d.addEventListener("DOMContentLoaded",function(e){
     digitalClock({
         reloj: d.getElementById('reloj'),
@@ -26,8 +28,6 @@ d.addEventListener("DOMContentLoaded",function(e){
     contdown('contdown','Dec 06,2020 21:41','Feliz Cumpleaños 😉');
 
     scrollTopBottom('.scroll-top-btn');
-
-    darkTheme('.dark-theme-btn','dark-mode');
 });
 
 d.addEventListener('keydown',function(e){
