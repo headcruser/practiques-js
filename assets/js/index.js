@@ -4,6 +4,7 @@ import { shortcuts,moveBall } from "./practicas/teclado.js";
 import contdown from "./practicas/cuenta_regresiva.js";
 import scrollTopBottom from "./practicas/boton_scroll.js";
 import darkTheme from "./practicas/tema_obscuro.js";
+import responsiveMedia from "./practicas/objeto_response.js";
 
 
 const d = document;
@@ -28,6 +29,22 @@ d.addEventListener("DOMContentLoaded",function(e){
     contdown('contdown','Dec 06,2020 21:41','Feliz Cumpleaños 😉');
 
     scrollTopBottom('.scroll-top-btn');
+
+    responsiveMedia([
+        {
+            element:'content-video',
+            mq:'(min-width:1024px)',
+            mobileContent:`<a href="https://youtu.be/hXIHPOV2yl8" target="_blank">Video musical</a>`,
+            mobileDesktop: `<iframe width="560" height="315" src="https://www.youtube.com/embed/hXIHPOV2yl8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
+        },
+        {
+            element:'content-map',
+            mq:'(min-width:1024px)',
+            mobileContent:`<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4902517346977!2d-96.13641278578572!3d19.173778053875814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3414635fce555%3A0x2a090a734148433d!2sFondo%20de%20bikini!5e0!3m2!1ses-419!2smx!4v1594949690989!5m2!1ses-419!2smx" target="_blank">Video musical</a>`,
+            mobileDesktop: `<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3768.4902517346977!2d-96.13641278578572!3d19.173778053875814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c3414635fce555%3A0x2a090a734148433d!2sFondo%20de%20bikini!5e0!3m2!1ses-419!2smx!4v1594949690989!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>`
+        },
+    ]);
+
 });
 
 d.addEventListener('keydown',function(e){
