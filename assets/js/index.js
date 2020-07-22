@@ -6,6 +6,7 @@ import scrollTopBottom from "./practicas/boton_scroll.js";
 import darkTheme from "./practicas/tema_obscuro.js";
 import responsiveMedia from "./practicas/objeto_response.js";
 import responsiveTest from "./practicas/prueba_responsive.js";
+import userDeviceInfo from "./practicas/deteccion_dispositivos.js";
 
 
 const d = document;
@@ -47,6 +48,8 @@ d.addEventListener("DOMContentLoaded",function(e){
     ]);
 
     responsiveTest('responsive-tester');
+
+    userDeviceInfo('user-device');
 
 });
 
