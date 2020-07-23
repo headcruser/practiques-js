@@ -7,11 +7,13 @@ import darkTheme from "./practicas/tema_obscuro.js";
 import responsiveMedia from "./practicas/objeto_response.js";
 import responsiveTest from "./practicas/prueba_responsive.js";
 import userDeviceInfo from "./practicas/deteccion_dispositivos.js";
+import networkStatus from "./practicas/deteccion_red.js";
 
 
 const d = document;
 
 darkTheme('.dark-theme-btn','dark-mode');
+networkStatus();
 
 d.addEventListener("DOMContentLoaded",function(e){
     digitalClock({
