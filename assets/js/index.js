@@ -8,6 +8,7 @@ import responsiveMedia from "./practicas/objeto_response.js";
 import responsiveTest from "./practicas/prueba_responsive.js";
 import userDeviceInfo from "./practicas/deteccion_dispositivos.js";
 import networkStatus from "./practicas/deteccion_red.js";
+import webCam from "./practicas/detecion_webcam.js";
 
 
 const d = document;
@@ -52,6 +53,8 @@ d.addEventListener("DOMContentLoaded",function(e){
     responsiveTest('responsive-tester');
 
     userDeviceInfo('user-device');
+
+    webCam('webcam','btn-stop-webcam');
 
 });
 
