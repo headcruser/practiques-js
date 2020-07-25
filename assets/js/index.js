@@ -9,6 +9,7 @@ import responsiveTest from "./practicas/prueba_responsive.js";
 import userDeviceInfo from "./practicas/deteccion_dispositivos.js";
 import networkStatus from "./practicas/deteccion_red.js";
 import webCam from "./practicas/detecion_webcam.js";
+import getGeolocation from "./practicas/geolocalizacion.js";
 
 
 const d = document;
@@ -55,6 +56,7 @@ d.addEventListener("DOMContentLoaded",function(e){
     userDeviceInfo('user-device');
 
     webCam('webcam','btn-stop-webcam');
+    getGeolocation('geolocation');
 
 });
 
