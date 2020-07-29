@@ -10,6 +10,7 @@ import userDeviceInfo from "./practicas/deteccion_dispositivos.js";
 import networkStatus from "./practicas/deteccion_red.js";
 import webCam from "./practicas/detecion_webcam.js";
 import getGeolocation from "./practicas/geolocalizacion.js";
+import searchFilters from "./practicas/filtro_busquedas.js";
 
 
 const d = document;
@@ -57,7 +58,7 @@ d.addEventListener("DOMContentLoaded",function(e){
 
     webCam('webcam','btn-stop-webcam');
     getGeolocation('geolocation');
-
+    searchFilters('input-search','.card')
 });
 
 d.addEventListener('keydown',function(e){
