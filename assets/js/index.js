@@ -11,6 +11,7 @@ import networkStatus from "./practicas/deteccion_red.js";
 import webCam from "./practicas/detecion_webcam.js";
 import getGeolocation from "./practicas/geolocalizacion.js";
 import searchFilters from "./practicas/filtro_busquedas.js";
+import getElmentRandom from "./practicas/elemento_aleatorio.js";
 
 
 const d = document;
@@ -59,6 +60,7 @@ d.addEventListener("DOMContentLoaded",function(e){
     webCam('webcam','btn-stop-webcam');
     getGeolocation('geolocation');
     searchFilters('input-search','.card')
+    getElmentRandom('btn-getItem','.item','random-notification-item')
 });
 
 d.addEventListener('keydown',function(e){

@@ -33,6 +33,7 @@
             <a href="#seccion-8">Deteccion de la camara web</a>
             <a href="#seccion-9">Geolocalizacion</a>
             <a href="#seccion-10">Filtros de busquedas</a>
+            <a href="#seccion-10">Elemento aleatorio</a>
         </nav>
     </aside>
     <main>
@@ -46,16 +47,19 @@
                 <button id='btn-desactivar-alarma'>Desactivar Alarma</button>
             </div>
         </section>
+
         <section class="section" id="seccion-2">
             <h2>Eventos del teclado</h2>
             <article class='stage'>
                 <div class="ball"></div>
             </article>
         </section>
+
         <section class="section" id="seccion-3">
             <h2>Cuenta Regresiva</h2>
             <div id="contdown"></div>
         </section>
+
         <section class="section" id="seccion-4">
             <h2>Responsive con Javascript</h2>
             <div id="content-video"></div>
@@ -91,10 +95,12 @@
             </div>
             <video id="webcam"></video>
         </section>
+
         <section class="section" id="seccion-9">
             <h2>Geolocalizacion</h2>
             <div id="geolocation"></div>
         </section>
+
         <section class="section" id="seccion-10">
             <h2>Filtro de busqueda</h2>
             <input id="input-search" type='search' placeholder="Buscar" class="card-filter">
@@ -125,6 +131,27 @@
                 </figure>
             </article>
         </section>
+
+        <section id="seccion-11" class="section">
+            <h2>Elemento aleatorio</h2>
+            <button id="btn-getItem">Obtener elemento</button>
+            <br><br>
+            <div id="random-notification-item"></div>
+
+            <ul class="elements">
+                <li class="item">Alejandra</li>
+                <li class="item">Fernanda</li>
+                <li class="item">Karla</li>
+                <li class="item">Jessica</li>
+                <li class="item">Blanca</li>
+                <li class="item">Mayra</li>
+                <li class="item">Daniela</li>
+                <li class="item">Estefania</li>
+                <li class="item">Rosario</li>
+                <li class="item">Michelle</li>
+            </ul>
+        </section>
+
     </main>
     <script src="./assets/js/index.js" type="module"></script>
 </body>
